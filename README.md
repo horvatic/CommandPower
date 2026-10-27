@@ -4,6 +4,25 @@
 
 A single-player, isometric 2D real-time strategy demo set in 35,000 AD. Choose Humans, Iron Synod, Kharuun Brood, Veyr Dominion, or either Aetherbound host against any AI faction. Build a base, harvest regenerating spiritual essence around ancient wells, produce faction-specific armies, and destroy the enemy Command Center. Original pre-rendered sprites, worn industrial materials, textured wasteland terrain, and a gunmetal sidebar give the 2:1 battlefield a classic late-1990s RTS look.
 
+## Gameplay gallery
+
+Captured in-game on Ashen Crossing, with normal resource costs, production timers, combat, and fog of war.
+
+**Defending the wells:** Human hover units exchange laser fire with an Iron Synod raid while Prospectors keep the base supplied.
+
+![Human defenders and Iron Synod attackers fighting around a spiritual well, with laser fire and an explosion](docs/media/human-synod-battle.png)
+
+**See it in motion:** a 15-second gameplay clip showing the raid unfold. Click the looping preview to open the full-resolution MP4. The clip is silent.
+
+[![Animated gameplay preview of Humans defending their base against the Iron Synod](docs/media/gameplay-preview.gif)](docs/media/defending-the-wells.mp4)
+
+[Watch or download the gameplay video (MP4)](docs/media/defending-the-wells.mp4)
+
+| Building the economy | Faction warfare |
+|---|---|
+| ![Human base with Prospectors harvesting essence, a Refinery, Barracks, Factory, and power infrastructure](docs/media/base-and-economy.png) | ![Kharuun plant forces confronting Veyr crystalline units near a spiritual well](docs/media/kharuun-veyr-battle.png) |
+| Harvest essence, deliver cargo, and expand production. | Kharuun Brood and Veyr Dominion bring distinct silhouettes to the battlefield. |
+
 ## Quick start
 
 On Linux x86-64 with OpenGL 3.3, install Git, Bash, curl, unzip, and zip, then run:
