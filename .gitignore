@@ -1,0 +1,24 @@
+# Generated Godot cache, downloaded engine, and release packages.
+/.godot/
+/.tools/
+/dist/
+
+# Preview and benchmark output; keep the Godot ignore marker.
+/artifacts/*
+!/artifacts/.gdignore
+
+# Local agent configuration and credentials.
+/.agents/
+/.codex/
+/.aws/
+.env
+.env.*
+export_credentials.cfg
+
+# Python caches and temporary editor files.
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+*~
+.DS_Store

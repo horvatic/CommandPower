@@ -1,0 +1,50 @@
+[
+  {
+    "path": "laser_infantry_1.ogg",
+    "role": "infantry",
+    "variant": 1,
+    "seconds": 0.362
+  },
+  {
+    "path": "laser_infantry_2.ogg",
+    "role": "infantry",
+    "variant": 2,
+    "seconds": 0.362
+  },
+  {
+    "path": "laser_infantry_3.ogg",
+    "role": "infantry",
+    "variant": 3,
+    "seconds": 0.362
+  },
+  {
+    "path": "laser_tank_1.ogg",
+    "role": "tank",
+    "variant": 1,
+    "seconds": 0.672
+  },
+  {
+    "path": "laser_tank_2.ogg",
+    "role": "tank",
+    "variant": 2,
+    "seconds": 0.672
+  },
+  {
+    "path": "laser_tank_3.ogg",
+    "role": "tank",
+    "variant": 3,
+    "seconds": 0.672
+  },
+  {
+    "path": "construction_start.ogg",
+    "role": "construction",
+    "variant": 1,
+    "seconds": 0.912
+  },
+  {
+    "path": "construction_complete.ogg",
+    "role": "construction",
+    "variant": 2,
+    "seconds": 1.112
+  }
+]

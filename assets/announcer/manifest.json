@@ -1,0 +1,121 @@
+[
+  {
+    "event": "production_started",
+    "path": "production_started.ogg",
+    "text": "Building units.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.07
+  },
+  {
+    "event": "unit_under_attack",
+    "path": "unit_under_attack.ogg",
+    "text": "Unit under attack.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.283
+  },
+  {
+    "event": "building_under_attack",
+    "path": "building_under_attack.ogg",
+    "text": "Building under attack.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.405
+  },
+  {
+    "event": "unit_lost",
+    "path": "unit_lost.ogg",
+    "text": "Unit lost.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.095
+  },
+  {
+    "event": "building_constructed",
+    "path": "building_constructed.ogg",
+    "text": "Building constructed.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.239
+  },
+  {
+    "event": "construction_started",
+    "path": "construction_started.ogg",
+    "text": "Construction started.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.374
+  },
+  {
+    "event": "unit_ready",
+    "path": "unit_ready.ogg",
+    "text": "Unit ready.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 0.865
+  },
+  {
+    "event": "building_lost",
+    "path": "building_lost.ogg",
+    "text": "Building lost.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.147
+  },
+  {
+    "event": "insufficient_essence",
+    "path": "insufficient_essence.ogg",
+    "text": "Insufficient essence.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.569
+  },
+  {
+    "event": "low_power",
+    "path": "low_power.ogg",
+    "text": "Low power.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 0.924
+  },
+  {
+    "event": "power_restored",
+    "path": "power_restored.ogg",
+    "text": "Power restored.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.044
+  },
+  {
+    "event": "training_cancelled",
+    "path": "training_cancelled.ogg",
+    "text": "Training cancelled.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.122
+  },
+  {
+    "event": "cannot_build_here",
+    "path": "cannot_build_here.ogg",
+    "text": "Cannot build here.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.28
+  },
+  {
+    "event": "exit_blocked",
+    "path": "exit_blocked.ogg",
+    "text": "Production exit blocked.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.583
+  },
+  {
+    "event": "victory",
+    "path": "victory.ogg",
+    "text": "Victory.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 0.714
+  },
+  {
+    "event": "defeat",
+    "path": "defeat.ogg",
+    "text": "Defeat.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 0.711
+  },
+  {
+    "event": "draw",
+    "path": "draw.ogg",
+    "text": "Battle ended in a draw.",
+    "voice": "en_US-ljspeech-high",
+    "seconds": 1.574
+  }
+]

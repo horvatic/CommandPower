@@ -1,0 +1,5 @@
+.godot/
+.tools/
+dist/
+artifacts/
+__pycache__/

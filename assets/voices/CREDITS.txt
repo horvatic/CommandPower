@@ -1,0 +1,53 @@
+CommandPower unit and announcer audio
+
+Dialogue, procedural nonverbal sounds, processing, and generator code:
+Copyright (c) 2026 CommandPower contributors; see the game's LICENSE.
+
+Human unit and command-announcer lines were generated locally using Piper 1.3.0 and the publicly
+distributed Piper voice models, then processed into original radio
+effects. Neural models, speech tools, and source recordings are not bundled
+with the game. No dialogue was sent to an online speech service.
+
+en_US-joe-medium
+Model: https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/joe/medium
+Model card: https://huggingface.co/rhasspy/piper-voices/raw/main/en/en_US/joe/medium/MODEL_CARD
+Source dataset: https://github.com/OHF-Voice/voice-datasets
+The model card identifies the source dataset license as CC0, and notes
+fine-tuning from the U.S. English lessac medium voice.
+
+en_US-ljspeech-high
+Model: https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/ljspeech/high
+Model card: https://huggingface.co/rhasspy/piper-voices/raw/main/en/en_US/ljspeech/high/MODEL_CARD
+Source dataset: https://keithito.com/LJ-Speech-Dataset/
+The model card identifies the source recordings as public domain and notes
+training from scratch; training details: https://brycebeattie.com/files/tts/
+
+Offline authoring tool: https://github.com/OHF-Voice/piper1-gpl
+Piper is GPL-3.0 software, used only as an offline authoring dependency.
+Its code and models are not included in CommandPower's runtime or package.
+
+Faction sound themes — 2026-10-26
+
+Only Human units use spoken dialogue. All 180 Human recordings remain unchanged.
+The command announcer also retains its existing recordings and processing.
+
+All 900 non-Human unit responses are original procedural, wordless sounds:
+Iron Synod: cybernetic resonance, metallic pulses and network-like harmonics.
+Kharuun Brood: living grove, leafy breath and resonant wood.
+Heavenly Host: celestial choir, wordless harmony, organ tones and bells.
+Infernal Legion: abyssal growl, snarls, rough breath and dark reflections.
+Veyr Dominion: crystal resonance, inharmonic chimes and cavernous echoes.
+
+Each faction has 21 unit roles and three variants per supported action; unarmed
+units have no attack bank. Unit register and texture vary within the faction
+sound theme. No speech recordings or speech models enter these non-Human cues.
+The 96 existing original-role wordless recordings, including Seraph Guard's
+choir, are preserved byte-for-byte. The other 804 non-Human clips replace the
+previous spoken responses. faction_theme_revision.json records protected,
+previous and current SHA-256 hashes. original_hashes.json records the current
+approved 144 original-role recordings. manifest.json and expansion_manifest.json
+record unit identity, action, sound theme and duration; only Human entries
+contain dialogue transcripts.
+
+Procedural synthesis and processing run offline using Python, NumPy and
+libsndfile. Only rendered stereo Ogg files are used during gameplay.
