@@ -72,7 +72,7 @@ Open **SETTINGS** from the title/results screen or **Settings / Pause** from the
 
 ## Play
 
-For a downloaded Linux package, keep the entire folder together and run `./play.sh`. The engine is included; no separate Godot installation is needed.
+For a downloaded package, extract the ZIP and keep the entire folder together. Run `./play.sh` on Linux, `CommandPower.exe` on Windows, or `CommandPower.app` on macOS. The engine is included; no separate Godot installation is needed.
 
 From the title screen, choose **SKIRMISH**, select a battlefield, your faction, the AI faction, and separate army colors, then choose **Easy**, **Normal**, or **Hard** and start the match. Heavenly Host and Infernal Legion are separate Aetherbound choices; mirror matches are supported. Choose **Ashen Crossing** (small, 72 × 48 tiles), **The Silent Wells** (medium, 96 × 64; the default), **Shattered Basin** (large, 128 × 96), or **Frontier Reach** (huge, 160 × 112). All maps have equal starting unit counts and 900 essence per side. Eight selectable army colors distinguish opponents even when both choose the same faction; choosing a duplicate automatically gives the other commander a different color. Easy expands slowly and attacks later; Normal uses balanced pressure; Hard expands faster and attacks earlier and more often. All levels use the same faction stats, starting resources, costs, build times, and fog-of-war rules as the player; difficulty grants no combat or economy bonuses. Restarting keeps your chosen map, factions, colors, and difficulty. **MAIN MENU** confirms before leaving a running match; the results screen offers a fresh skirmish setup.
 
@@ -134,7 +134,19 @@ From the repository root:
 
 The build creates `dist/CommandPower-linux-x86_64/` and `dist/CommandPower-linux-x86_64.zip`. Run the package with `./dist/CommandPower-linux-x86_64/play.sh`. Tests and builds use isolated temporary profiles and do not alter player data. Close any running packaged game before rebuilding.
 
-The source repository includes runtime assets, Godot import settings, resource IDs, authoring scripts, tests, and documentation. Downloaded engines (`.tools/`), Godot caches (`.godot/`), preview output (`artifacts/`), Python caches, and packaged builds (`dist/`) are excluded from version control. Distribute the generated ZIP as a GitHub Release asset when publishing a playable build.
+From Linux, also run `./scripts/build.sh windows` and `./scripts/build.sh macos` to cross-export Windows x86-64 and universal macOS (Intel and Apple Silicon) packages. The first cross-export downloads the matching official Godot export templates into `.tools/`. Each target includes the game, runtime, README, license, and engine/audio notices in its own ZIP under `dist/`.
+
+### GitHub Actions downloads
+
+The **Test and build** workflow runs on pushes to `main`, pull requests targeting `main`, and manual runs via **Actions → Test and build → Run workflow**. It runs every suite in `./tests/run.sh` before building the three packages. Open a successful run and download these ZIPs from **Artifacts** (retained for 30 days):
+
+- `CommandPower-linux-x86_64.zip`
+- `CommandPower-windows-x86_64.zip`
+- `CommandPower-macos-universal.zip`
+
+Windows builds are unsigned. macOS builds use ad-hoc signing without Apple notarization, so downloaded apps may need approval in **System Settings → Privacy & Security** before opening. See [Godot's macOS distribution notes](https://docs.godotengine.org/en/4.5/tutorials/export/exporting_for_macos.html#code-signing-and-notarization).
+
+The source repository includes runtime assets, Godot import settings, resource IDs, authoring scripts, tests, and documentation. Downloaded engines/templates (`.tools/`), Godot caches (`.godot/`), preview output (`artifacts/`), Python caches, and packaged builds (`dist/`) are excluded from version control.
 
 ## Asset authoring
 
@@ -150,4 +162,4 @@ Laser and construction sounds are original synthesized assets in `assets/sfx/`; 
 
 Original game code, artwork, and music are covered by `LICENSE`. Godot is distributed under its MIT license; packaged builds include `GODOT-LICENSE.txt` and `GODOT-COPYRIGHT.txt` for its engine and third-party notices. Command & Conquer is a visual and genre reference; this demo uses original game assets. The soundtrack draws on the industrial rock/electronic RTS tradition associated with Frank Klepacki, using original composition and synthesis.
 
-Unit and announcer audio use original dialogue and sound design. Speech-model provenance is recorded in `assets/voices/CREDITS.txt` in source and `VOICE-CREDITS.txt` in the Linux package.
+Unit and announcer audio use original dialogue and sound design. Speech-model provenance is recorded in `assets/voices/CREDITS.txt` in source and `VOICE-CREDITS.txt` in each package.

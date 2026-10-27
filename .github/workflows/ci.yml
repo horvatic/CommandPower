@@ -1,0 +1,61 @@
+name: Test and build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    name: Tests and desktop ZIPs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install Godot 4.5.1
+        run: ./scripts/setup-engine.sh
+
+      - name: Run all tests
+        run: ./tests/run.sh
+
+      - name: Build Linux ZIP
+        run: ./scripts/build.sh linux
+
+      - name: Build Windows ZIP
+        run: ./scripts/build.sh windows
+
+      - name: Build macOS ZIP
+        run: ./scripts/build.sh macos
+
+      # Upload the ZIPs directly, preserving executable permissions inside them.
+      - name: Upload Linux ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/CommandPower-linux-x86_64.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload Windows ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/CommandPower-windows-x86_64.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload macOS ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/CommandPower-macos-universal.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
